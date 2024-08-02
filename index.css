@@ -1,3 +1,8 @@
+:root {
+    --input_clr: #dce1eb;
+    --button_clr: #ac485a;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -7,10 +12,22 @@ html, body {
 
 input {
     color: #432000;
-    background-color: #dce1eb;
+    background-color: var(--input_clr);
+    border-radius: 10px;
+    border: var(--input_clr);
+    padding: 8px;
+    width: 8rem;
 }
 
 button {
     color: #fdfdfd;
-    background-color: #ac485a;
+    background-color: var(--button_clr);
+    border-radius: 10px;
+    border: var(--button_clr);
+    padding: 8px;
+    width: 8rem;
+}
+
+input, button {
+    text-align: center;
 }
