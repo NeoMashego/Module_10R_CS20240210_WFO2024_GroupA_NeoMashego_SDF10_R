@@ -10,24 +10,37 @@ html, body {
     background-color: #eef0f4;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    margin: 30px auto;
+}
+
+img {
+    width: 150px;
+    margin: 0 auto;
+}
+
 input {
+    font-family: 'Rubik', sans-serif;
     color: #432000;
     background-color: var(--input_clr);
     border-radius: 10px;
     border: var(--input_clr);
     padding: 8px;
-    width: 8rem;
+    font-size: 18px;
+    text-align: center;
+    margin: 10px 0;
 }
 
 button {
+    font-family: 'Rubik', sans-serif;
     color: #fdfdfd;
     background-color: var(--button_clr);
     border-radius: 10px;
     border: var(--button_clr);
     padding: 8px;
-    width: 8rem;
-}
-
-input, button {
+    font-size: 18px;
     text-align: center;
 }
