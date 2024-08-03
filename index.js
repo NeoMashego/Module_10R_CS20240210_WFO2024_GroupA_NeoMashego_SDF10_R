@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
-import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
+import { getDatabase, ref, push, onValue, remove } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
 
 const appSettings = {
     databaseURL: "https://playground-5b250-default-rtdb.asia-southeast1.firebasedatabase.app/"
@@ -27,6 +27,12 @@ function addItemToShoppingListEl(items) {
 
     let newEl = document.createElement("li")                //shoppingListEl.innerHTML += `<li>${itemValue}</li>`
     newEl.textContent = itemValue
+    
+    newEl.addEventListener("click", function() {
+        let exactLocationOfItemInDB = ref(database, `shoppingList/${itemID}`)           //console.log(itemID)
+        remove(exactLocationOfItemInDB)
+    })
+
     shoppingListEl.append = newEl
 }
 
