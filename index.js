@@ -11,7 +11,7 @@ const shoppingListInDB = ref(database, "shoppingList")
 
 const inputFieldEl = document.getElementById("input-field")
 const addButtonEl = document.getElementById("add-button")
-/*const shoppingListEl = document.getElementById("shopping-list")
+const shoppingListEl = document.getElementById("shopping-list")
 
 addButtonEl.addEventListener("click", function() {              //event listener listens to what useer does to produce output.
     let inputValue = inputFieldEl.value                         //set variable = id.value(from id) to show in console.log
@@ -21,4 +21,4 @@ addButtonEl.addEventListener("click", function() {              //event listener
     inputFieldEl.value = ""
 
     shoppingListEl.innerHTML += `<li>${inputValue}</li>`
-})*/
+})
