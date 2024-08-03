@@ -1,4 +1,4 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
+/*import { initializeApp } from "./firebase-app.js"
 
 const appSettings = {
     databaseURL: "https://toyshoppingcart-default-rtdb.europe-west1.firebasedatabase.app/"
@@ -6,7 +6,7 @@ const appSettings = {
 
 const app = initializeApp(appSettings)
 
-console.log(app)
+console.log(app)*/
 
 
 const inputFieldEl = document.getElementById("input-field")
