@@ -17,8 +17,16 @@ addButtonEl.addEventListener("click", function() {              //event listener
     let inputValue = inputFieldEl.value                         //set variable = id.value(from id) to show in console.log
     
     push(shoppingListInDB, inputValue)
-    
-    inputFieldEl.value = ""
 
-    shoppingListEl.innerHTML += `<li>${inputValue}</li>`
+   addItemToShoppingListEl(inputValue)
+
+   clearInputFieldEl()
 })
+
+function addItemToShoppingListEl(itemValue) {
+    shoppingListEl.innerHTML += `<li>${itemValue}</li>`
+}
+
+function clearInputFieldEl() {
+    inputFieldEl.value = ""
+}
