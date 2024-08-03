@@ -32,5 +32,6 @@ function clearInputFieldEl() {
 }
 
 onValue(shoppingListInDB, function(snapshot) {
-    console.log(snapshot.val())
+    let shoppingListArray = Object.values(snapshot.val())                          //console.log(snapshot.val())
+    console.log(shoppingListArray)
 })
