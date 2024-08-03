@@ -22,7 +22,9 @@ addButtonEl.addEventListener("click", function() {              //event listener
 })
 
 function addItemToShoppingListEl(itemValue) {
-    shoppingListEl.innerHTML += `<li>${itemValue}</li>`
+    let newEl = document.createElement("li")                //shoppingListEl.innerHTML += `<li>${itemValue}</li>`
+    newEl.textContent = itemValue
+    shoppingListEl.append = newEl
 }
 
 function clearInputFieldEl() {
