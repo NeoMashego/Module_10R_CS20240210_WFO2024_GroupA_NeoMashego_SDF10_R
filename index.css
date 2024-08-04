@@ -1,6 +1,8 @@
 :root {
-    --input_clr: #dce1eb;
-    --button_clr: #ac485a;
+    --clr1: #dce1eb;
+    --clr2: #ac485a;
+    --clr3: #432000;
+    --clr4: #ffecc7;
 }
 
 html, body {
@@ -8,6 +10,7 @@ html, body {
     padding: 0;
     font-family: 'Rubik', sans-serif;
     background-color: #eef0f4;
+    color: var(--clr3);
 }
 
 .container {
@@ -24,10 +27,10 @@ img {
 
 input {
     font-family: 'Rubik', sans-serif;
-    color: #432000;
-    background-color: var(--input_clr);
+    color: var(--clr3);
+    background-color: var(--clr1);
     border-radius: 10px;
-    border: var(--input_clr);
+    border: var(--clr1);
     padding: 8px;
     font-size: 18px;
     text-align: center;
@@ -37,12 +40,18 @@ input {
 button {
     font-family: 'Rubik', sans-serif;
     color: #fdfdfd;
-    background-color: var(--button_clr);
+    background-color: var(--clr2);
     border-radius: 10px;
-    border: var(--button_clr);
+    border: var(--clr2);
     padding: 8px;
     font-size: 18px;
     text-align: center;
+}
+
+button:hover {
+    background-color: var(--clr3);
+    border: var(--clr3);
+    cursor: pointer;
 }
 
 ul {
@@ -60,4 +69,10 @@ ul li {
     border-radius: 10px;
     flex-grow: 1;
     text-align: center;
+}
+
+ul li:hover {
+    background-color: var(--clr4);
+    border: var(--clr4);
+    cursor: pointer;
 }
