@@ -22,7 +22,7 @@ addButtonEl.addEventListener("click", function() {              //event listener
 })
 
 onValue(shoppingListInDB, function(snapshot) {
-    if (snapshot.exist()){
+    if (snapshot.exists()){
         let shoppingListArray = Object.entries(snapshot.val())                     //console.log(shoppingListArray)
 
         clearShoppingListEl()
@@ -32,7 +32,7 @@ onValue(shoppingListInDB, function(snapshot) {
             let currentListID = currentList[0]
             let currentListValues = currentList[1]
 
-            addItemToShoppingListEl(currentList)
+            appendItemToShoppingListEl(currentList)
         }
     } else {
         shoppingListEl.innerHTML = "No items here..."
@@ -40,9 +40,9 @@ onValue(shoppingListInDB, function(snapshot) {
     
 })
 
-function addItemToShoppingListEl(items) {
-    let itemID = items[0]
-    let itemValue = items[1]
+function appendItemToShoppingListEl(item) {
+    let itemID = item[0]
+    let itemValue = item[1]
 
     let newEl = document.createElement("li")                //shoppingListEl.innerHTML += `<li>${itemValue}</li>`
     newEl.textContent = itemValue
@@ -52,7 +52,7 @@ function addItemToShoppingListEl(items) {
         remove(exactLocationOfItemInDB)
     })
 
-    shoppingListEl.append = newEl
+    shoppingListEl.append(newEl)
 }
 
 function clearInputFieldEl() {
