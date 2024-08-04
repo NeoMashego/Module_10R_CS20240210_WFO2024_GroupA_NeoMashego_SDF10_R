@@ -1,15 +1,17 @@
 :root {
-    --clr1: #dce1eb;
-    --clr2: #ac485a;
-    --clr3: #432000;
-    --clr4: #ffecc7;
+    --clr: #f1faee;
+    --clr1: #a8dadc;
+    --clr2: #0096c7;
+    --clr3: #1d3557;
+    --clr4: #669bbc;
+    --white: #fdfdfd;
 }
 
 html, body {
     margin: 0;
     padding: 0;
     font-family: 'Rubik', sans-serif;
-    background-color: #eef0f4;
+    background-color: var(--clr);
     color: var(--clr3);
 }
 
@@ -37,9 +39,13 @@ input {
     margin: 10px 0;
 }
 
+::placeholder {
+    color: var(--clr3);
+}
+
 button {
     font-family: 'Rubik', sans-serif;
-    color: #fdfdfd;
+    color: var(--white);
     background-color: var(--clr2);
     border-radius: 10px;
     border: var(--clr2);
@@ -75,4 +81,5 @@ ul li:hover {
     background-color: var(--clr4);
     border: var(--clr4);
     cursor: pointer;
+    color: var(--white);
 }
